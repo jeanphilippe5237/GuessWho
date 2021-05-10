@@ -1,1 +1,1 @@
-Je vais utiliser Git pour mon travail GuessWho
+Je vais utiliser Git pour mon travail GuessWho, version 2
