@@ -1,0 +1,13 @@
+C:\Users\jeanp_anr3ihn\Desktop\Prog ou whatever\GuessWho3\TP3\TP3\bin\Debug\netcoreapp3.1\TP3.exe
+C:\Users\jeanp_anr3ihn\Desktop\Prog ou whatever\GuessWho3\TP3\TP3\bin\Debug\netcoreapp3.1\TP3.deps.json
+C:\Users\jeanp_anr3ihn\Desktop\Prog ou whatever\GuessWho3\TP3\TP3\bin\Debug\netcoreapp3.1\TP3.runtimeconfig.json
+C:\Users\jeanp_anr3ihn\Desktop\Prog ou whatever\GuessWho3\TP3\TP3\bin\Debug\netcoreapp3.1\TP3.runtimeconfig.dev.json
+C:\Users\jeanp_anr3ihn\Desktop\Prog ou whatever\GuessWho3\TP3\TP3\bin\Debug\netcoreapp3.1\TP3.dll
+C:\Users\jeanp_anr3ihn\Desktop\Prog ou whatever\GuessWho3\TP3\TP3\bin\Debug\netcoreapp3.1\TP3.pdb
+C:\Users\jeanp_anr3ihn\Desktop\Prog ou whatever\GuessWho3\TP3\TP3\obj\Debug\netcoreapp3.1\TP3.csprojAssemblyReference.cache
+C:\Users\jeanp_anr3ihn\Desktop\Prog ou whatever\GuessWho3\TP3\TP3\obj\Debug\netcoreapp3.1\TP3.AssemblyInfoInputs.cache
+C:\Users\jeanp_anr3ihn\Desktop\Prog ou whatever\GuessWho3\TP3\TP3\obj\Debug\netcoreapp3.1\TP3.AssemblyInfo.cs
+C:\Users\jeanp_anr3ihn\Desktop\Prog ou whatever\GuessWho3\TP3\TP3\obj\Debug\netcoreapp3.1\TP3.csproj.CoreCompileInputs.cache
+C:\Users\jeanp_anr3ihn\Desktop\Prog ou whatever\GuessWho3\TP3\TP3\obj\Debug\netcoreapp3.1\TP3.dll
+C:\Users\jeanp_anr3ihn\Desktop\Prog ou whatever\GuessWho3\TP3\TP3\obj\Debug\netcoreapp3.1\TP3.pdb
+C:\Users\jeanp_anr3ihn\Desktop\Prog ou whatever\GuessWho3\TP3\TP3\obj\Debug\netcoreapp3.1\TP3.genruntimeconfig.cache
