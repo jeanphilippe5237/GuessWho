@@ -47,6 +47,17 @@ namespace TP3
             Console.WriteLine(plateauBleu.AfficherPersonnagePige(indicePersoBleu));
             */
 
+            //string reponse = Questions.DemanderQuestions();
+            //Console.WriteLine("");
+            //Console.WriteLine("Voici la question actuelle");
+            //Console.WriteLine(Questions.questionCourante);
+            //Console.WriteLine("Et le numéro: " + reponse[1]);
+
+            Questions.AfficherQuestionCourante();
+            Console.WriteLine("");
+            Console.WriteLine(Questions.questionCourante);
+           
+
         }
     }
 }

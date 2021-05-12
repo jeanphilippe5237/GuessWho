@@ -16,308 +16,218 @@ namespace TP3.Classes
         public static string questionG = "g) A-t'il une barbe? ";
         public static string questionH = "h) A-t'il des lunettes? ";
 
-        
-        public static void ReponseQuestionVraiFaux()
-        {
-            
-        }
-        public static string ReponseQuestion()
+        public static bool vrai = true;
+        public static bool faux = false;
+        public static string questionCourante;
+
+        public static bool ReponseVraiFaux()
         {
             string reponse = DemanderQuestions();
-            Console.Clear();
+            if (questionCourante == questionA)
+            {
+                Console.WriteLine("Oui (o) ou (n)?");
+                return vrai;
+            }
+            return vrai;
+        }
+
+        public static string AfficherQuestionCourante()
+        {
+            string reponse = DemanderQuestions();
             
-            if (reponse == "a")
+            if (questionCourante == questionA)
             {
-                Console.WriteLine(questionA);
-                bool sortie = false;
-                while (sortie == false)
+                int numeroDeQuestion = reponse[1];
+                if  (numeroDeQuestion == 1)
                 {
-                    Console.WriteLine("Oui (o) ou Non (n)?");
-                    string ouiOuNon = Console.ReadLine();
-                    if (ouiOuNon == "o")
-                    {
-                        return ouiOuNon;
-                        sortie = true;
-                    }
-                    else if (ouiOuNon == "n")
-                    {
-                        return ouiOuNon;
-                        sortie = true;
-                    }
-                    else
-                    {
-                        continue;
-                    }
+                    questionCourante = "A-t'il les cheveux noirs?";
+                    return questionCourante;
                 }
-                return null;
-            }
+                else if (numeroDeQuestion == 2)
+                {
+                    questionCourante = "A-t'il les cheveux bruns?";
+                    return questionCourante;
+                }
+                else if (numeroDeQuestion == 3)
+                {
+                    questionCourante = "A-t'il les cheveux blonds?";
+                    return questionCourante;
+                }
+                else if (numeroDeQuestion == 4)
+                {
+                    questionCourante = "A-t'il les cheveux roux?";
+                    return questionCourante;
+                }
+                else if (numeroDeQuestion == 5)
+                {
+                    questionCourante = "A-t'il les cheveux châtains?";
+                    return questionCourante;
+                }
+                else
+                {
+                    questionCourante = "A-t'il les cheveux blancs?";
+                    return questionCourante;
+                }
 
-            else if (reponse == "b")
-            {
-                Console.WriteLine(questionB);
-                bool sortie = false;
-                while (sortie == false)
-                {
-                    Console.WriteLine("Oui (o) ou Non (n)?");
-                    string ouiOuNon = Console.ReadLine();
-                    if (ouiOuNon == "o")
-                    {
-                        return ouiOuNon;
-                        sortie = true;
-                    }
-                    else if (ouiOuNon == "n")
-                    {
-                        return ouiOuNon;
-                        sortie = true;
-                    }
-                    else
-                    {
-                        continue;
-                    }
-                }
-                return null;
             }
+            else if (questionCourante == questionC)
+            {
+                int numeroDeQuestion = reponse[1];
+                if (numeroDeQuestion == 1)
+                {
+                    questionCourante = "A-t'il les yeux bruns?";
+                    return questionCourante;
+                }
+                else if (numeroDeQuestion == 2)
+                {
+                    questionCourante = "A-t'il les yeux bleus?";
+                    return questionCourante;
+                }
+                else if (numeroDeQuestion == 3)
+                {
+                    questionCourante = "A-t'il les yeux verts?";
+                    return questionCourante;
+                }
+                else
+                {
+                    questionCourante = "A-t'il les yeux gris?";
+                    return questionCourante;
+                }
 
-            else if (reponse == "c")
-            {
-                Console.WriteLine(questionC);
-                bool sortie = false;
-                while (sortie == false)
-                {
-                    Console.WriteLine("Oui (o) ou Non (n)?");
-                    string ouiOuNon = Console.ReadLine();
-                    if (ouiOuNon == "o")
-                    {
-                        return ouiOuNon;
-                        sortie = true;
-                    }
-                    else if (ouiOuNon == "n")
-                    {
-                        return ouiOuNon;
-                        sortie = true;
-                    }
-                    else
-                    {
-                        continue;
-                    }
-                }
-                return null;
             }
-
-            else if (reponse == "d")
+            else if (questionCourante == questionD)
             {
-                Console.WriteLine(questionD);
-                bool sortie = false;
-                while (sortie == false)
+                int numeroDeQuestion = reponse[1];
+                if (numeroDeQuestion == 1)
                 {
-                    Console.WriteLine("Oui (o) ou Non (n)?");
-                    string ouiOuNon = Console.ReadLine();
-                    if (ouiOuNon == "o")
-                    {
-                        return ouiOuNon;
-                        sortie = true;
-                    }
-                    else if (ouiOuNon == "n")
-                    {
-                        return ouiOuNon;
-                        sortie = true;
-                    }
-                    else
-                    {
-                        continue;
-                    }
+                    questionCourante = "A-t'il les cheveux longs?";
+                    return questionCourante;
                 }
-                return null;
-            }
-
-            else if (reponse == "e")
-            {
-                Console.WriteLine(questionE);
-                bool sortie = false;
-                while (sortie == false)
+                else if (numeroDeQuestion == 2)
                 {
-                    Console.WriteLine("Oui (o) ou Non (n)?");
-                    string ouiOuNon = Console.ReadLine();
-                    if (ouiOuNon == "o")
-                    {
-                        return ouiOuNon;
-                        sortie = true;
-                    }
-                    else if (ouiOuNon == "n")
-                    {
-                        return ouiOuNon;
-                        sortie = true;
-                    }
-                    else
-                    {
-                        continue;
-                    }
+                    questionCourante = "A-t'il les cheveux courts?";
+                    return questionCourante;
                 }
-                return null;
-            }
-            else if (reponse == "f")
-            {
-                Console.WriteLine(questionF);
-                bool sortie = false;
-                while (sortie == false)
+                else
                 {
-                    Console.WriteLine("Oui (o) ou Non (n)?");
-                    string ouiOuNon = Console.ReadLine();
-                    if (ouiOuNon == "o")
-                    {
-                        return ouiOuNon;
-                        sortie = true;
-                    }
-                    else if (ouiOuNon == "n")
-                    {
-                        return ouiOuNon;
-                        sortie = true;
-                    }
-                    else
-                    {
-                        continue;
-                    }
+                    questionCourante = "Est-il chauve?";
+                    return questionCourante;
                 }
-                return null;
             }
-
-            else if (reponse == "g")
-            {
-                Console.WriteLine(questionG);
-                bool sortie = false;
-                while (sortie == false)
-                {
-                    Console.WriteLine("Oui (o) ou Non (n)?");
-                    string ouiOuNon = Console.ReadLine();
-                    if (ouiOuNon == "o")
-                    {
-                        return ouiOuNon;
-                        sortie = true;
-                    }
-                    else if (ouiOuNon == "n")
-                    {
-                        return ouiOuNon;
-                        sortie = true;
-                    }
-                    else
-                    {
-                        continue;
-                    }
-                }
-                return null;
-            }
-
+            
             else
             {
-                Console.WriteLine(questionH);
-                bool sortie = false;
-                while (sortie == false)
-                {
-                    Console.WriteLine("Oui (o) ou Non (n)?");
-                    string ouiOuNon = Console.ReadLine();
-                    if (ouiOuNon == "o")
-                    {
-                        return ouiOuNon;
-                        sortie = true;
-                    }
-                    else if (ouiOuNon == "n")
-                    {
-                        return ouiOuNon;
-                        sortie = true;
-                    }
-                    else
-                    {
-                        continue;
-                    }
-                }
-                return null;
+                return questionCourante;
             }
-
         }
         public static string DemanderQuestions()
         {
             try
             {
-               
+                AfficherQuestions();
                 bool sortie = false;
-                
                 while (sortie == false)
                 {
-                    Console.WriteLine(" ");
-                    Console.WriteLine("Choisissez une question...");
                     Console.WriteLine("");
-                    AfficherQuestions();
-                    Console.WriteLine("");
+                    Console.WriteLine("Choissisez une question...");
                     string reponse = Console.ReadLine();
-                    
+
                     if (reponse == "a")
                     {
-                        Console.WriteLine("Choissisez une couleur de 1 à 6...");
-                        reponse = reponse + Console.ReadLine();
-                        Console.WriteLine(reponse);
-                        return reponse;
+                        questionCourante = questionA;
+                        bool sortie2 = false;
+                        while (sortie2 == false)
+                        {
+                            Console.WriteLine("");
+                            Console.WriteLine("Choissisez un numéro de question de 1 à 6");
+                            int numeroDeQuestion = int.Parse(Console.ReadLine());
+                            if (numeroDeQuestion <= 6 && numeroDeQuestion > 0)
+                            {
+                                reponse = reponse + numeroDeQuestion;
+                                return reponse;
+                            }
+                        }
                         sortie = true;
                     }
-                    
                     else if (reponse == "b")
                     {
+                        questionCourante = questionB;
                         return reponse;
                         sortie = true;
                     }
-                    
                     else if (reponse == "c")
                     {
-                        return reponse;
+                        questionCourante = questionC;
+                        bool sortie2 = false;
+                        while (sortie2 == false)
+                        {
+                            Console.WriteLine("");
+                            Console.WriteLine("Choissisez un numéro de question de 1 à 4");
+                            int numeroDeQuestion = int.Parse(Console.ReadLine());
+                            if (numeroDeQuestion <= 4 && numeroDeQuestion > 0)
+                            {
+                                reponse = reponse + numeroDeQuestion;
+                                return reponse;
+                            }
+                        }
                         sortie = true;
                     }
-                    
                     else if (reponse == "d")
                     {
-                        return reponse;
+                        questionCourante = questionD;
+                        bool sortie2 = false;
+                        while (sortie2 == false)
+                        {
+                            Console.WriteLine("");
+                            Console.WriteLine("Choissisez un numéro de question de 1 à 3");
+                            int numeroDeQuestion = int.Parse(Console.ReadLine());
+                            if (numeroDeQuestion <= 3 && numeroDeQuestion > 0)
+                            {
+                                reponse = reponse + numeroDeQuestion;
+                                return reponse;
+                            }
+                        }
                         sortie = true;
                     }
-                    
                     else if (reponse == "e")
                     {
+                        questionCourante = questionE;
                         return reponse;
                         sortie = true;
                     }
                     else if (reponse == "f")
                     {
+                        questionCourante = questionF;
                         return reponse;
                         sortie = true;
                     }
-
                     else if (reponse == "g")
                     {
+                        questionCourante = questionG;
                         return reponse;
                         sortie = true;
                     }
-
                     else if (reponse == "h")
                     {
+                        questionCourante = questionH;
                         return reponse;
                         sortie = true;
                     }
                     else
                     {
-                        Console.WriteLine("");
-                        Console.WriteLine("Veuillez rentrer une lettre de a-h");
                         continue;
                     }
+                    return null;
                 }
-                
-                
-            } catch (FormatException)
+            } catch (FormatException erreur)
             {
-                Console.WriteLine("Une erreur de format est survenue");
-            } catch (Exception)
+                Console.WriteLine("Une erreur de format est survenue.");
+            } catch (Exception erreur)
             {
-                Console.WriteLine("Une erreur est survenue");
+                Console.WriteLine("Une erreur est survenue.");
             }
             return null;
         }
-
         public static void AfficherQuestions()
         {
             Console.WriteLine(questionA);
