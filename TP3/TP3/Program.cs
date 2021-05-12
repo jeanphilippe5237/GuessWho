@@ -12,6 +12,7 @@ namespace TP3
     {
         static void Main(string[] args)
         {
+            /*
             //Création des 2 plateaux de jeu 
             Plateau plateauRouge = new Plateau(CouleurPlateau.Rouge);
             plateauRouge.RemplirPlateau();
@@ -24,7 +25,7 @@ namespace TP3
             Console.Write("Entrez le nom du joueur du plateau Rouge: ");
             string nom = Console.ReadLine();
             Joueur joueurRouge = new Joueur(nom);
-            Console.WriteLine(plateauRouge);
+            Console.WriteLine(plateauRouge); 
             int indicePersoRouge = plateauRouge.PigerPersonnage();
             Console.WriteLine(plateauRouge.AfficherPersonnagePige(indicePersoRouge));
 
@@ -44,6 +45,7 @@ namespace TP3
             Console.WriteLine(plateauBleu);
             int indicePersoBleu = plateauBleu.PigerPersonnage();
             Console.WriteLine(plateauBleu.AfficherPersonnagePige(indicePersoBleu));
+            */
 
         }
     }
