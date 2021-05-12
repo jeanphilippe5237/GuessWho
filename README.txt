@@ -1,2 +1,1 @@
-Le TP3 est présentement une copie du TP2, je l'ai testé et tout marche. 
-Je peux maintenant commencer le TP3!
+J'ai faite un bout de la classe Questions mais je vais toute supprimer et recommencer ma classe Questions du début. 
