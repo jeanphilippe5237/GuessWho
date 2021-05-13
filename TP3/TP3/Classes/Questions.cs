@@ -37,7 +37,7 @@ namespace TP3.Classes
                     }
                     else if (ouiOuNon == "n")
                     {
-                        return false;
+                        return faux;
                     }
                     else
                     {

@@ -80,6 +80,20 @@ namespace TP3.Classes
             int rand = rnd.Next(1, 24);
             return rand;
         }
+
+        public Personnages AfficherPersonnage(int numeroPerso)
+        {
+            Console.WriteLine(" ");
+            foreach (Personnages p in ListeDePersonnages)
+            {
+                if (p._numero == numeroPerso)
+                {
+                    return p;
+                }
+
+            }
+            return null;
+        }
         public Personnages AfficherPersonnagePige(int numeroPerso)
         {
             Console.WriteLine(" ");
