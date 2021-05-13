@@ -53,9 +53,8 @@ namespace TP3
             //Console.WriteLine(Questions.questionCourante);
             //Console.WriteLine("Et le numéro: " + reponse[1]);
 
-            Questions.AfficherQuestionCourante();
-            Console.WriteLine("");
-            Console.WriteLine(Questions.questionCourante);
+            bool reponse = Questions.ReponseVraiFaux();
+            Console.WriteLine(reponse);
            
 
         }

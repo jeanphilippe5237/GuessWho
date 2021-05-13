@@ -22,11 +22,175 @@ namespace TP3.Classes
 
         public static bool ReponseVraiFaux()
         {
-            string reponse = DemanderQuestions();
+            AfficherQuestionCourante();
+            Console.WriteLine(questionCourante);
             if (questionCourante == questionA)
             {
-                Console.WriteLine("Oui (o) ou (n)?");
-                return vrai;
+                bool sortie = false;
+                while (sortie == false)
+                {
+                    Console.WriteLine("Oui (o) ou (n)?");
+                    string ouiOuNon = Console.ReadLine();
+                    if (ouiOuNon == "o")
+                    {
+                        return vrai;
+                    }
+                    else if (ouiOuNon == "n")
+                    {
+                        return false;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+            }
+            else if (questionCourante == questionB)
+            {
+                bool sortie = false;
+                while (sortie == false)
+                {
+                    Console.WriteLine("Oui (o) ou (n)?");
+                    string ouiOuNon = Console.ReadLine();
+                    if (ouiOuNon == "o")
+                    {
+                        return vrai;
+                    }
+                    else if (ouiOuNon == "n")
+                    {
+                        return false;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+            }
+            else if (questionCourante == questionC)
+            {
+                bool sortie = false;
+                while (sortie == false)
+                {
+                    Console.WriteLine("Oui (o) ou (n)?");
+                    string ouiOuNon = Console.ReadLine();
+                    if (ouiOuNon == "o")
+                    {
+                        return vrai;
+                    }
+                    else if (ouiOuNon == "n")
+                    {
+                        return false;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+            }
+            else if (questionCourante == questionD)
+            {
+                bool sortie = false;
+                while (sortie == false)
+                {
+                    Console.WriteLine("Oui (o) ou (n)?");
+                    string ouiOuNon = Console.ReadLine();
+                    if (ouiOuNon == "o")
+                    {
+                        return vrai;
+                    }
+                    else if (ouiOuNon == "n")
+                    {
+                        return false;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+            }
+            else if (questionCourante == questionE)
+            {
+                bool sortie = false;
+                while (sortie == false)
+                {
+                    Console.WriteLine("Oui (o) ou (n)?");
+                    string ouiOuNon = Console.ReadLine();
+                    if (ouiOuNon == "o")
+                    {
+                        return vrai;
+                    }
+                    else if (ouiOuNon == "n")
+                    {
+                        return false;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+            }
+            else if (questionCourante == questionF)
+            {
+                bool sortie = false;
+                while (sortie == false)
+                {
+                    Console.WriteLine("Oui (o) ou (n)?");
+                    string ouiOuNon = Console.ReadLine();
+                    if (ouiOuNon == "o")
+                    {
+                        return vrai;
+                    }
+                    else if (ouiOuNon == "n")
+                    {
+                        return false;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+            }
+            else if (questionCourante == questionG)
+            {
+                bool sortie = false;
+                while (sortie == false)
+                {
+                    Console.WriteLine("Oui (o) ou (n)?");
+                    string ouiOuNon = Console.ReadLine();
+                    if (ouiOuNon == "o")
+                    {
+                        return vrai;
+                    }
+                    else if (ouiOuNon == "n")
+                    {
+                        return false;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+            }
+            else
+            {
+                bool sortie = false;
+                while (sortie == false)
+                {
+                    Console.WriteLine("Oui (o) ou (n)?");
+                    string ouiOuNon = Console.ReadLine();
+                    if (ouiOuNon == "o")
+                    {
+                        return vrai;
+                    }
+                    else if (ouiOuNon == "n")
+                    {
+                        return false;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
             }
             return vrai;
         }
@@ -37,28 +201,27 @@ namespace TP3.Classes
             
             if (questionCourante == questionA)
             {
-                int numeroDeQuestion = reponse[1];
-                if  (numeroDeQuestion == 1)
+                if  (reponse == "a1")
                 {
                     questionCourante = "A-t'il les cheveux noirs?";
                     return questionCourante;
                 }
-                else if (numeroDeQuestion == 2)
+                else if (reponse == "a2")
                 {
                     questionCourante = "A-t'il les cheveux bruns?";
                     return questionCourante;
                 }
-                else if (numeroDeQuestion == 3)
+                else if (reponse == "a3")
                 {
                     questionCourante = "A-t'il les cheveux blonds?";
                     return questionCourante;
                 }
-                else if (numeroDeQuestion == 4)
+                else if (reponse == "a4")
                 {
                     questionCourante = "A-t'il les cheveux roux?";
                     return questionCourante;
                 }
-                else if (numeroDeQuestion == 5)
+                else if (reponse == "a5")
                 {
                     questionCourante = "A-t'il les cheveux châtains?";
                     return questionCourante;
@@ -72,18 +235,18 @@ namespace TP3.Classes
             }
             else if (questionCourante == questionC)
             {
-                int numeroDeQuestion = reponse[1];
-                if (numeroDeQuestion == 1)
+                
+                if (reponse == "c1")
                 {
                     questionCourante = "A-t'il les yeux bruns?";
                     return questionCourante;
                 }
-                else if (numeroDeQuestion == 2)
+                else if (reponse == "c2")
                 {
                     questionCourante = "A-t'il les yeux bleus?";
                     return questionCourante;
                 }
-                else if (numeroDeQuestion == 3)
+                else if (reponse == "c3")
                 {
                     questionCourante = "A-t'il les yeux verts?";
                     return questionCourante;
@@ -97,13 +260,12 @@ namespace TP3.Classes
             }
             else if (questionCourante == questionD)
             {
-                int numeroDeQuestion = reponse[1];
-                if (numeroDeQuestion == 1)
+                if (reponse == "d1")
                 {
                     questionCourante = "A-t'il les cheveux longs?";
                     return questionCourante;
                 }
-                else if (numeroDeQuestion == 2)
+                else if (reponse == "d2")
                 {
                     questionCourante = "A-t'il les cheveux courts?";
                     return questionCourante;
