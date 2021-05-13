@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using TP3.Classes;
+using TP3.Classes.Enums;
 
 namespace TP3.Classes
 {
@@ -19,7 +20,517 @@ namespace TP3.Classes
         public static bool vrai = true;
         public static bool faux = false;
         public static string questionCourante;
+        public static bool VraiOuFaux;
 
+
+        public static void EnleverPersonnagesListe(Plateau pl)
+        {
+            Personnages noP = new Personnages();
+            List<Personnages> liste = new List<Personnages>(24);
+            if (questionCourante == "A-t'il les cheveux noirs?")
+            {
+                if (VraiOuFaux == true)
+                {
+                    CouleurCheveux coulChe = (CouleurCheveux)Enum.Parse(typeof(CouleurCheveux), "Noir");
+                    noP.SetCouleurCheveux(coulChe);
+                }
+
+                foreach (Personnages p in pl.ListeDePersonnages)
+                {
+                    if (p._couleurCheveux == noP._couleurCheveux)
+                    {
+                        liste.Add(p);
+                        pl.ListeDePersonnages = liste;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+            }
+            else if (questionCourante == "A-t'il les cheveux bruns?")
+            {
+                if (VraiOuFaux == true)
+                {
+                    CouleurCheveux coulChe = (CouleurCheveux)Enum.Parse(typeof(CouleurCheveux), "Brun");
+                    noP.SetCouleurCheveux(coulChe);
+                }
+
+                foreach (Personnages p in pl.ListeDePersonnages)
+                {
+                    if (p._couleurCheveux == noP._couleurCheveux)
+                    {
+                        liste.Add(p);
+                        pl.ListeDePersonnages = liste;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+            }
+            else if (questionCourante == "A-t'il les cheveux blonds?")
+            {
+                if (VraiOuFaux == true)
+                {
+                    CouleurCheveux coulChe = (CouleurCheveux)Enum.Parse(typeof(CouleurCheveux), "Blond");
+                    noP.SetCouleurCheveux(coulChe);
+                }
+                foreach (Personnages p in pl.ListeDePersonnages)
+                {
+                    if (p._couleurCheveux == noP._couleurCheveux)
+                    {
+                        liste.Add(p);
+                        pl.ListeDePersonnages = liste;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+            }
+            else if (questionCourante == "A-t'il les cheveux roux?")
+            {
+                CouleurCheveux coulChe = (CouleurCheveux)Enum.Parse(typeof(CouleurCheveux), "Roux");
+                noP.SetCouleurCheveux(coulChe);
+
+                foreach (Personnages p in pl.ListeDePersonnages)
+                {
+                    if (p._couleurCheveux == noP._couleurCheveux)
+                    {
+                        liste.Add(p);
+                        pl.ListeDePersonnages = liste;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+            }
+            else if (questionCourante == "A-t'il les cheveux châtains?")
+            {
+                CouleurCheveux coulChe = (CouleurCheveux)Enum.Parse(typeof(CouleurCheveux), "Châtain");
+                noP.SetCouleurCheveux(coulChe);
+
+                foreach (Personnages p in pl.ListeDePersonnages)
+                {
+                    if (p._couleurCheveux == noP._couleurCheveux)
+                    {
+                        liste.Add(p);
+                        pl.ListeDePersonnages = liste;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+            }
+            else if (questionCourante == "A-t'il les cheveux blancs?")
+            {
+                CouleurCheveux coulChe = (CouleurCheveux)Enum.Parse(typeof(CouleurCheveux), "Blanc");
+                noP.SetCouleurCheveux(coulChe);
+
+                foreach (Personnages p in pl.ListeDePersonnages)
+                {
+                    if (p._couleurCheveux == noP._couleurCheveux)
+                    {
+                        liste.Add(p);
+                        pl.ListeDePersonnages = liste;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+            }
+            else if (questionCourante == "A-t'il les yeux bruns?")
+            {
+                CouleurYeux coulY = (CouleurYeux)Enum.Parse(typeof(CouleurYeux), "Bruns");
+                noP.SetCouleurYeux(coulY);
+
+                foreach (Personnages p in pl.ListeDePersonnages)
+                {
+                    if (p._couleurYeux == noP._couleurYeux)
+                    {
+                        liste.Add(p);
+                        pl.ListeDePersonnages = liste;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+            }
+            else if (questionCourante == "A-t'il les yeux bleus?")
+            {
+                CouleurYeux coulY = (CouleurYeux)Enum.Parse(typeof(CouleurYeux), "Bleus");
+                noP.SetCouleurYeux(coulY);
+
+                foreach (Personnages p in pl.ListeDePersonnages)
+                {
+                    if (p._couleurYeux == noP._couleurYeux)
+                    {
+                        liste.Add(p);
+                        pl.ListeDePersonnages = liste;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+            }
+            else if (questionCourante == "A-t'il les yeux verts?")
+            {
+                CouleurYeux coulY = (CouleurYeux)Enum.Parse(typeof(CouleurYeux), "Verts");
+                noP.SetCouleurYeux(coulY);
+
+                foreach (Personnages p in pl.ListeDePersonnages)
+                {
+                    if (p._couleurYeux == noP._couleurYeux)
+                    {
+                        liste.Add(p);
+                        pl.ListeDePersonnages = liste;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+            }
+            else if (questionCourante == "A-t'il les yeux gris?")
+            {
+                CouleurYeux coulY = (CouleurYeux)Enum.Parse(typeof(CouleurYeux), "Gris");
+                noP.SetCouleurYeux(coulY);
+
+                foreach (Personnages p in pl.ListeDePersonnages)
+                {
+                    if (p._couleurYeux == noP._couleurYeux)
+                    {
+                        liste.Add(p);
+                        pl.ListeDePersonnages = liste;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+            }
+            else if (questionCourante == "A-t'il les cheveux longs?")
+            {
+                LongueurCheveux lon = (LongueurCheveux)Enum.Parse(typeof(LongueurCheveux), "Long");
+                noP.SetLongueurCheveux(lon);
+                foreach (Personnages p in pl.ListeDePersonnages)
+                {
+                    if (p._longueurCheveux == noP._longueurCheveux)
+                    {
+                        liste.Add(p);
+                        pl.ListeDePersonnages = liste;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+            }
+            else if (questionCourante == "A-t'il les cheveux courts?")
+            {
+                LongueurCheveux lon = (LongueurCheveux)Enum.Parse(typeof(LongueurCheveux), "Court");
+                noP.SetLongueurCheveux(lon);
+                foreach (Personnages p in pl.ListeDePersonnages)
+                {
+                    if (p._longueurCheveux == noP._longueurCheveux)
+                    {
+                        liste.Add(p);
+                        pl.ListeDePersonnages = liste;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+            }
+            else if (questionCourante == "Est-il chauve?")
+            {
+                LongueurCheveux lon = (LongueurCheveux)Enum.Parse(typeof(LongueurCheveux), "Chauve");
+                noP.SetLongueurCheveux(lon);
+                foreach (Personnages p in pl.ListeDePersonnages)
+                {
+                    if (p._longueurCheveux == noP._longueurCheveux)
+                    {
+                        liste.Add(p);
+                        pl.ListeDePersonnages = liste;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+            }
+            else if (questionCourante == questionB)
+            {
+                
+            }
+            else if (questionCourante == questionE)
+            {
+               
+            }
+            else if (questionCourante == questionF)
+            {
+                
+            }
+            else if (questionCourante == questionG)
+            {
+                
+            }
+            else if (questionCourante == questionH)
+            {
+                
+            }
+        
+        }
+
+        public static Personnages CreationPersonnageJoueur()
+        {
+            VraiOuFaux = ReponseVraiFaux();
+            Personnages p = new Personnages();
+            if (questionCourante == "A-t'il les cheveux noirs?")
+            {
+                if (VraiOuFaux == true)
+                {
+                    CouleurCheveux coulChe = (CouleurCheveux)Enum.Parse(typeof(CouleurCheveux), "Noir");
+                    p.SetCouleurCheveux(coulChe);
+                    return p;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            else if (questionCourante == "A-t'il les cheveux bruns?")
+            {
+                if (VraiOuFaux == true)
+                {
+                    CouleurCheveux coulChe = (CouleurCheveux)Enum.Parse(typeof(CouleurCheveux), "Brun");
+                    p.SetCouleurCheveux(coulChe);
+                    return p;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            else if (questionCourante == "A-t'il les cheveux blonds?")
+            {
+                if (VraiOuFaux == true)
+                {
+                    CouleurCheveux coulChe = (CouleurCheveux)Enum.Parse(typeof(CouleurCheveux), "Blond");
+                    p.SetCouleurCheveux(coulChe);
+                    return p;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            else if (questionCourante == "A-t'il les cheveux roux?")
+            {
+                if (VraiOuFaux == true)
+                {
+                    CouleurCheveux coulChe = (CouleurCheveux)Enum.Parse(typeof(CouleurCheveux), "Roux");
+                    p.SetCouleurCheveux(coulChe);
+                    return p;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            else if (questionCourante == "A-t'il les cheveux châtains?")
+            {
+                if (VraiOuFaux == true)
+                {
+                    CouleurCheveux coulChe = (CouleurCheveux)Enum.Parse(typeof(CouleurCheveux), "Châtain");
+                    p.SetCouleurCheveux(coulChe);
+                    return p;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            else if (questionCourante == "A-t'il les cheveux blancs?")
+            {
+                if (VraiOuFaux == true)
+                {
+                    CouleurCheveux coulChe = (CouleurCheveux)Enum.Parse(typeof(CouleurCheveux), "Blanc");
+                    p.SetCouleurCheveux(coulChe);
+                    return p;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            else if (questionCourante == "A-t'il les yeux bruns?")
+            {
+                if (VraiOuFaux == true)
+                {
+                    CouleurYeux coulY = (CouleurYeux)Enum.Parse(typeof(CouleurYeux), "Bruns");
+                    p.SetCouleurYeux(coulY);
+                    return p;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            else if (questionCourante == "A-t'il les yeux bleus?")
+            {
+                if (VraiOuFaux == true)
+                {
+                    CouleurYeux coulY = (CouleurYeux)Enum.Parse(typeof(CouleurYeux), "Bleus");
+                    p.SetCouleurYeux(coulY);
+                    return p;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            else if (questionCourante == "A-t'il les yeux verts?")
+            {
+                if (VraiOuFaux == true)
+                {
+                    CouleurYeux coulY = (CouleurYeux)Enum.Parse(typeof(CouleurYeux), "Verts");
+                    p.SetCouleurYeux(coulY);
+                    return p;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            else if (questionCourante == "A-t'il les yeux gris?")
+            {
+                if (VraiOuFaux == true)
+                {
+                    CouleurYeux coulY = (CouleurYeux)Enum.Parse(typeof(CouleurYeux), "Gris");
+                    p.SetCouleurYeux(coulY);
+                    return p;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            else if (questionCourante == "A-t'il les cheveux longs?")
+            {
+                if (VraiOuFaux == true)
+                {
+                    LongueurCheveux lon = (LongueurCheveux)Enum.Parse(typeof(LongueurCheveux), "Long");
+                    p.SetLongueurCheveux(lon);
+                    return p;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            else if (questionCourante == "A-t'il les cheveux courts?")
+            {
+                if (VraiOuFaux == true)
+                {
+                    LongueurCheveux lon = (LongueurCheveux)Enum.Parse(typeof(LongueurCheveux), "Court");
+                    p.SetLongueurCheveux(lon);
+                    return p;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            else if (questionCourante == "Est-il chauve?")
+            {
+                if (VraiOuFaux == true)
+                {
+                    LongueurCheveux lon = (LongueurCheveux)Enum.Parse(typeof(LongueurCheveux), "Chauve");
+                    p.SetLongueurCheveux(lon);
+                    return p;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            else if (questionCourante == questionB)
+            {
+                if (VraiOuFaux == true)
+                {
+                    Sexe s = (Sexe)Enum.Parse(typeof(Sexe), "Homme");
+                    p.SetSexe(s);
+                    return p;
+                }
+                else
+                {
+                    Sexe s = (Sexe)Enum.Parse(typeof(Sexe), "Femme");
+                    p.SetSexe(s);
+                    return p;
+                }
+            }
+            else if (questionCourante == questionE)
+            {
+                if (VraiOuFaux == true)
+                {
+                    p.SetChapeau(true);
+                    return p;
+                }
+                else
+                {
+                    p.SetChapeau(false);
+                    return p;
+                }
+            }
+            else if (questionCourante == questionF)
+            {
+                if (VraiOuFaux == true)
+                {
+                    p.SetMoustache(true);
+                    return p;
+                }
+                else
+                {
+                    p.SetMoustache(false);
+                    return p;
+                }
+            }
+            else if (questionCourante == questionG)
+            {
+                if (VraiOuFaux == true)
+                {
+                    p.SetBarbe(true);
+                    return p;
+                }
+                else
+                {
+                    p.SetBarbe(false);
+                    return p;
+                }
+            }
+            else if (questionCourante == questionH)
+            {
+                if (VraiOuFaux == true)
+                {
+                    p.SetLunettes(true);
+                    return p;
+                }
+                else
+                {
+                    p.SetLunettes(false);
+                    return p;
+                }
+            }
+            return null;
+        }
         public static bool ReponseVraiFaux()
         {
             AfficherQuestionCourante();

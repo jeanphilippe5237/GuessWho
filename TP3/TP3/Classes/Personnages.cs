@@ -8,16 +8,16 @@ namespace TP3.Classes
 {
     class Personnages
     {
-        public int _numero = 0;
-        private string _prenom = "";
-        private CouleurCheveux _couleurCheveux;
-        private CouleurYeux _couleurYeux;
-        private Sexe _sexe;
-        private LongueurCheveux _longueurCheveux;
-        private bool _chapeau = true;
-        private bool _moustache = true;
-        private bool _barbe = true;
-        private bool _lunettes = true;
+        public int _numero;
+        public string _prenom;
+        public CouleurCheveux _couleurCheveux;
+        public CouleurYeux _couleurYeux;
+        public Sexe _sexe;
+        public LongueurCheveux _longueurCheveux;
+        public bool _chapeau;
+        public bool _moustache;
+        public bool _barbe;
+        public bool _lunettes;
 
 
         public Personnages() { }

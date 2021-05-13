@@ -30,7 +30,7 @@ namespace TP3
 
 
             //Le joueur doit appuyer sur une touche pour effacer l'écran 
-            //et permettre au joueur bleu d'entrer ses infos. 
+            //et permettre au joueur bleu d'entrer ses infos.     
             Console.Write("Appuyer sur une touche pour continuer...");
             Console.ReadKey();
             Console.Clear();
@@ -53,6 +53,10 @@ namespace TP3
 
             
             Joueur joueurCourant = new Joueur();
+            Plateau plateauCourant = new Plateau();
+            Personnages personnageJoueurRouge = new Personnages();
+            Personnages personnageJoueurBleu = new Personnages();
+            Personnages personnageJoueurCourant = new Personnages();
 
             bool sortie = false;
             while (sortie == false)
@@ -62,11 +66,15 @@ namespace TP3
                 if (rougeOuBleu == "r")
                 {
                     joueurCourant = joueurRouge;
+                    plateauCourant = plateauRouge;
+                    personnageJoueurCourant = personnageJoueurRouge;
                     sortie = true;
                 }
                 else if (rougeOuBleu == "b")
                 {
                     joueurCourant = joueurBleu;
+                    plateauCourant = plateauBleu;
+                    personnageJoueurCourant = personnageJoueurBleu;
                     sortie = true;
                 }
                 else
@@ -78,6 +86,7 @@ namespace TP3
 
             Console.Clear();
 
+
             sortie = false;
             while (sortie == false)
             {
@@ -87,6 +96,14 @@ namespace TP3
                 {
                     Console.WriteLine("Voici ton personnage choisi: ");
                     Console.WriteLine(plateauBleu.AfficherPersonnage(numeroChoisi));
+                    if (joueurCourant == joueurRouge)
+                    {
+                        personnageJoueurRouge = plateauRouge.ListeDePersonnages[numeroChoisi - 1];
+                    }
+                    else
+                    {
+                        personnageJoueurBleu = plateauBleu.ListeDePersonnages[numeroChoisi - 1];
+                    }
                     sortie = true;
                 }
                 else
@@ -116,6 +133,14 @@ namespace TP3
                 {
                     Console.WriteLine("Voici ton personnage choisi: ");
                     Console.WriteLine(plateauBleu.AfficherPersonnage(numeroChoisi));
+                    if (joueurCourant == joueurRouge)
+                    {
+                        personnageJoueurRouge = plateauRouge.ListeDePersonnages[numeroChoisi - 1];
+                    }
+                    else
+                    {
+                        personnageJoueurBleu = plateauBleu.ListeDePersonnages[numeroChoisi - 1];
+                    }
                     sortie = true;
                 }
                 else
@@ -123,38 +148,141 @@ namespace TP3
                     continue;
                 }
             }
-
+            
+            Console.Write("Appuyer sur une touche pour continuer...");
+            Console.ReadKey();
+            Console.Clear();
+            Console.WriteLine("");
+            Console.WriteLine("Le personnage du joueur rouge:");
+            Console.WriteLine(personnageJoueurRouge);
+            Console.WriteLine("");
+            Console.WriteLine("Le personnage du joueur bleu:");
+            Console.WriteLine(personnageJoueurBleu);
             Console.WriteLine("");
             Console.Write("Appuyer sur une touche pour continuer...");
             Console.ReadKey();
             Console.Clear();
 
-            if (joueurCourant == joueurBleu)
-            {
-                joueurCourant = joueurRouge;
-            }
-            else
-            {
-                joueurCourant = joueurBleu;
-            }
+            //if (joueurCourant == joueurBleu)
+            //{
+            //    joueurCourant = joueurRouge;
+            //    plateauCourant = plateauRouge;
+            //}
+            //else
+            //{
+            //    joueurCourant = joueurBleu;
+            //    plateauCourant = plateauBleu;
+            //}
 
-            Console.WriteLine("");
-            Console.WriteLine(joueurCourant._nomJoueur + ", choissisez une question à poser: ");
-            bool reponse = Questions.ReponseVraiFaux();
-            Console.WriteLine(reponse);
 
-            if (joueurCourant == joueurBleu)
+            //Le jeu commence:
+
+            sortie = false;
+
+            while (sortie == false)
             {
-                joueurCourant = joueurRouge;
+
+                bool sortie2 = false;
+                while (sortie2 == false)
+                {
+                    Console.WriteLine(joueurCourant._nomJoueur + ", voulez vous quitter la partie, ");
+                    Console.WriteLine("Oui (o) ou (n)?");
+                    string ouiOuNon = Console.ReadLine();
+                    if (ouiOuNon == "o")
+                    {
+                        sortie = true;
+                        goto AfterLoop;
+                    }
+                    else if (ouiOuNon == "n")
+                    {
+                        sortie2 = true;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                    
+                }
+
+
+                //Console.WriteLine("");
+                //Console.WriteLine(joueurCourant._nomJoueur + ", choissisez une question à poser: ");
+
+                //Console.WriteLine("");
+                //personnageJoueurCourant = Questions.CreationPersonnageJoueur();
+                //Console.WriteLine(personnageJoueurCourant);
+                //Console.WriteLine("");
+
+                //foreach (Personnages p in plateauCourant.ListeDePersonnages)
+                //{
+                //    if (personnageJoueurCourant._couleurCheveux != p._couleurCheveux)
+                //    {
+                //        plateauCourant.ListeDePersonnages.Remove(p);
+                //    }
+                //    else if (personnageJoueurCourant._couleurYeux != p._couleurYeux)
+                //    {
+                //        plateauCourant.ListeDePersonnages.Remove(p);
+                //    }
+                //    else if (personnageJoueurCourant._sexe != p._sexe)
+                //    {
+                //        plateauCourant.ListeDePersonnages.Remove(p);
+                //    }
+                //    else if (personnageJoueurCourant._longueurCheveux != p._longueurCheveux)
+                //    {
+                //        plateauCourant.ListeDePersonnages.Remove(p);
+                //    }
+                //    else if (personnageJoueurCourant._chapeau != p._chapeau)
+                //    {
+                //        plateauCourant.ListeDePersonnages.Remove(p);
+                //    }
+                //    else if (personnageJoueurCourant._moustache != p._moustache)
+                //    {
+                //        plateauCourant.ListeDePersonnages.Remove(p);
+                //    }
+                //    else if (personnageJoueurCourant._barbe != p._barbe)
+                //    {
+                //        plateauCourant.ListeDePersonnages.Remove(p);
+                //    }
+                //    else if (personnageJoueurCourant._lunettes != p._lunettes)
+                //    {
+                //        plateauCourant.ListeDePersonnages.Remove(p);
+                //    }
+                //}
+
+                //Console.WriteLine(plateauBleu);
+                //Console.WriteLine(plateauRouge);
+
+                Console.WriteLine("");
+                Console.WriteLine(joueurCourant._nomJoueur + ", choissisez une question à poser: ");
+
+                Console.WriteLine("");
+                personnageJoueurCourant = Questions.CreationPersonnageJoueur();
+                Console.WriteLine(personnageJoueurCourant);
+                Console.WriteLine("");
+
+                Questions.EnleverPersonnagesListe(plateauCourant);
+
+                Console.WriteLine(plateauCourant);
+
+                if (joueurCourant == joueurBleu)
+                {
+                    joueurCourant = joueurRouge;
+                    plateauCourant = plateauRouge;
+                    personnageJoueurCourant = personnageJoueurRouge;
+                }
+                else
+                {
+                    joueurCourant = joueurBleu;
+                    plateauCourant = plateauBleu;
+                    personnageJoueurCourant = personnageJoueurBleu;
+                }
+
+                Console.WriteLine("C'est au tour de " + joueurCourant._nomJoueur);
             }
-            else
-            {
-                joueurCourant = joueurBleu;
-            }
-            Console.WriteLine("");
-            Console.WriteLine(joueurCourant._nomJoueur + ", choissisez une question à poser: ");
-            reponse = Questions.ReponseVraiFaux();
-            Console.WriteLine(reponse);
+        //Fin du programme
+        AfterLoop:
+
+            Console.WriteLine("\nfin du programme");
         }
     }
 }
