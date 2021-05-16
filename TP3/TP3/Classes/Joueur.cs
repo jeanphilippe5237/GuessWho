@@ -7,7 +7,7 @@ namespace TP3.Classes
     class Joueur
     {
         public string _nomJoueur = "";
-        private int _nbVictoires = 0;
+        public int _nbVictoires = 0;
 
         public Joueur() { }
 
