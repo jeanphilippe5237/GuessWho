@@ -29,6 +29,9 @@ namespace TP3.Classes
         public static bool VraiOuFaux;
 
         //Cette fonction est utilisée pour enlever des personnages dans la liste du plateau du joueur, qui est passée en paramètre.
+        //elle utilise les autres fonctions pour marcher.
+        //Dans le fond, si la question est : A-t'il les cheveux noirs?, si la réponse est oui, tout les personnages qui n'ont pas les cheveux noirs
+        //vont se faire retirer de la liste des personnages. Si la réponse est non, la liste des personnages reste pareille.
         public static void EnleverPersonnagesListe(Plateau pl)
         {
             Personnages noP = new Personnages();
@@ -426,6 +429,10 @@ namespace TP3.Classes
         
         }
 
+        //Cette fonction sert à créer un personnage "temporaire" qui va servir de comparaison avec la liste des personnages.
+        //En gros, si la question courante est : A-t'il les cheveux courts? et la réponse est oui,
+        //le personnage temporaire aura les cheveux courts et va se faire comparer avec la liste des personnages, 
+        //qui va enlever tout les personnages qui n'ont pas les cheveux courts.
         public static Personnages CreationPersonnageJoueur()
         {
             VraiOuFaux = ReponseVraiFaux();
@@ -668,6 +675,8 @@ namespace TP3.Classes
             }
             return null;
         }
+        
+        //fonction qui converti la réponse (oui (o) ou non (n)) de l'utilisateur en vrai ou faux
         public static bool ReponseVraiFaux()
         {
             AfficherQuestionCourante();
@@ -843,6 +852,10 @@ namespace TP3.Classes
             return vrai;
         }
 
+        
+        //Cette fonction affiche la question courante
+        //Elle utilise la fonction DemanderQuestions()
+        //Elle retourne aussi une nouvelle question courante, pour la couleur de cheveux, de yeux, ou la longueur de cheveux. 
         public static string AfficherQuestionCourante()
         {
             string reponse = DemanderQuestions();
@@ -930,6 +943,12 @@ namespace TP3.Classes
                 return questionCourante;
             }
         }
+        
+        //fonction qui sert à demander au joueur la question qu'il veut poser.
+        //Pour les questions concernant la longueur ou la couleur des cheveux ainsi que la couleur des yeux,
+        //Il y a plusieurs choix donc il faut les demander et les retourner en un seul bloc, par exemple
+        //a1 == question a + le premier choix.
+        //La fonction suit le même principe donc c'est du ctrl c + ctrl v.
         public static string DemanderQuestions()
         {
             try
@@ -1038,6 +1057,8 @@ namespace TP3.Classes
             }
             return null;
         }
+
+        //Afficher les questions
         public static void AfficherQuestions()
         {
             Console.WriteLine(questionA);
