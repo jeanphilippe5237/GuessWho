@@ -8,6 +8,7 @@ namespace TP3.Classes
 {
     class Questions
     {
+        //les questions posées à l'utilisateur
         public static string questionA = "a) A-t'il les cheveux: \n  \n     1) Noir \n     2)Brun \n     3)Blond \n     4)Roux \n     5)Châtain \n     6)Blanc \n";
         public static string questionB = "b) Es-t'il un homme? ";
         public static string questionC = "c) A-t'il les yeux: \n  \n     1) Bruns \n     2)Bleus \n     3)Verts \n     4)Gris \n";
@@ -17,11 +18,17 @@ namespace TP3.Classes
         public static string questionG = "g) A-t'il une barbe? ";
         public static string questionH = "h) A-t'il des lunettes? ";
 
+        //Variables pour m'aider à comprendre/ au cas ou (??)
         public static bool vrai = true;
         public static bool faux = false;
+        
+        //Pour connaitre la question qui est actuellement posée au joueur
         public static string questionCourante;
+        
+        //Variable qui est utilisée pour connaitre la réponse du joueur à une question vraie ou faux.
         public static bool VraiOuFaux;
 
+        //Cette fonction est utilisée pour enlever des personnages dans la liste du plateau du joueur, qui est passée en paramètre.
         public static void EnleverPersonnagesListe(Plateau pl)
         {
             Personnages noP = new Personnages();
